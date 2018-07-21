@@ -1,5 +1,5 @@
 # arin-whois
-Python Code for using ARIN’s Whois RESTful Web Service
+Python Code for using ARIN’s Whois RESTful web service to pull network and organization records
 
 # Requirements (Setup)
 
