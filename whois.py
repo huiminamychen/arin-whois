@@ -45,7 +45,6 @@ org_response = org_request.json()
 
 # Organization categories
 
-street = org_response['org']['streetAddress']['line']['$']
 city = org_response['org']['city']['$']
 postal = org_response['org']['postalCode']['$']
 country = org_response['org']['iso3166-1']['code2']['$']
@@ -97,6 +96,12 @@ try:
 
 except KeyError:
     state = ''
+
+try:
+    street = org_response['org']['streetAddress']['line']['$']
+
+except TypeError:
+    street = org_response['org']['streetAddress']['line'][0]['$']
 
 # Output to terminal
 print(f'You searched for: {args.ip}\n')
