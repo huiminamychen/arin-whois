@@ -3,8 +3,6 @@
 
 import requests
 import argparse
-import json
-
 
 parser = argparse.ArgumentParser(
     description='This utility performs a GET request to arin.net to perform queries on IP addresses and returns the output to the terminal.'
@@ -54,8 +52,6 @@ country = org_response['org']['iso3166-1']['code2']['$']
 org_last_updated = org_response['org']['updateDate']['$']
 org_rest_link = org_response['org']['ref']['$']
 
-
-
 # Try statements to catch commonly blank fields and differences in indexing on ARIN's side
 
 try:
@@ -102,7 +98,6 @@ try:
 except KeyError:
     state = ''
 
-
 # Output to terminal
 print(f'You searched for: {args.ip}\n')
 print('Network')
@@ -128,18 +123,3 @@ print(f'Country:          {country}')
 print(f'RegistrationDate: {org_reg_date}')
 print(f'LastUpdated:      {org_last_updated}')
 print(f'RESTful Link:     {org_rest_link}')
-
-
-#print(json.dumps(org_response, indent=4))
-
-
-
-
-
-
-
-
-
-
-#if __name__ == '__main__':
-#    main()
