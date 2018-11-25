@@ -4,14 +4,13 @@ Python Code for using ARIN’s Whois RESTful web service to pull network and org
 # Requirements (Setup)
 
 - Python 3.6+
-- Requests
+- requests
+- argparse
 ```
-pip install Requests
-```
-- Argparse
-```
+pip install requests
 pip install argparse
 ```
+
 ## Usage
 ```
 python whois.py -i 8.8.8.8
