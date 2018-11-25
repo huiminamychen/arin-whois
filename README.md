@@ -17,6 +17,12 @@ pip install argparse
 python whois.py -i 8.8.8.8
 python whois.py --ip 8.8.8.8
 ```
+## Demos
+
+![](help.gif)
+
+![](main.gif)
+
 # Troubleshooting
 - If you are receiving errors, please look at the Issues queue and see if there is already an issue open.
 
